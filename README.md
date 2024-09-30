@@ -14,7 +14,7 @@ The **Restaurant Guide** is a single-page application introducing users to vario
 
 - **Map Integration**: Displays restaurant locations on a map.
 
-- **Filters**: Allows filtering by criteria like type or location.
+- **Filters**: Allows filtering by rating criteria. As the filter is applied, the map dynamically updates to display markers indicating the locations of the filtered restaurants, ensuring a seamless and interactive experience.
 
 - **Containerization with Docker and Docker Compose**: Seamlessly integrates both frontend and backend.
 
@@ -25,6 +25,8 @@ The **Restaurant Guide** is a single-page application introducing users to vario
 - **Frontend**: React, TypeScript
 
 - **Google Places API**
+
+- **Google Maps API**
 
 - **Languages**: TypeScript (both backend and frontend)
 
