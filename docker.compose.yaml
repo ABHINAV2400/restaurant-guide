@@ -1,0 +1,19 @@
+version: '3'
+services:
+  backend:
+    build: ./restaurant-guide-backend
+    container_name: restaurant-guide-backend
+    ports:
+      - '4000:4000'  # Map backend to port 4000
+    env_file:
+      - .env
+    volumes:
+      - ./restaurant-guide-backend:/app
+
+  frontend:
+    build: ./restaurant-guide-frontend
+    container_name: restaurant-guide-frontend
+    ports:
+      - '80:80'  # Map frontend to port 3000
+    volumes:
+      - ./restaurant-guide-frontend:/app
