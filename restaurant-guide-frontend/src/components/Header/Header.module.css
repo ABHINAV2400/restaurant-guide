@@ -1,0 +1,75 @@
+/* src/components/Header/Header.module.css */
+
+.header { 
+  padding: 20px 30px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  text-decoration: none;
+  color: #333333;
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
+}
+
+.logo:hover {
+  color: #007bff;
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.logo h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px; /* Adds a little more spacing between letters for a modern look */
+  color: #007bff;
+}
+
+.description {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #6c757d;
+  max-width: 700px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Responsive Design */
+
+/* Tablet screens and smaller */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 30px;
+  }
+
+  .logo h1 {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+}
+
+/* Mobile screens and smaller */
+@media (max-width: 480px) {
+  .header {
+    padding: 15px 20px;
+  }
+
+  .logo h1 {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}

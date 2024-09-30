@@ -1,0 +1,61 @@
+/* src/components/RatingFilter/RatingFilter.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align stars and content to the right */
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.stars {
+  display: flex;
+  justify-content: center; /* Align stars to the right */
+  margin-bottom: 10px;
+}
+
+.starIcon {
+  font-size: 1.4rem; /* Increase the size of the stars */
+  margin: 0 3px;
+}
+
+.slider {
+  width: 150px;
+  margin-top: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.9;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+}
+
+.ratingValue {
+  margin-top: 5px;
+  font-weight: bold;
+}
