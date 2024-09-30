@@ -9,7 +9,7 @@ import restaurantRoutes from './routes/restaurantRoutes';
 import errorHandler from './middlewares/errorHandler';
 import path from 'path';
 
-dotenv.config();
+require('dotenv').config();
 
 const app = Fastify({
   logger: true,

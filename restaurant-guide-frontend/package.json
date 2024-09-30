@@ -40,7 +40,7 @@
       "import/no-extraneous-dependencies": [
         "error",
         {
-            "devDependencies": ["**/*.test.js", "**/*.spec.js", "**/setupTests.js", "**/RatingFilter.tsx"]
+            "devDependencies": ["**/*.test.js", "**/*.spec.js", "**/setupTests.js", "**/RatingFilter.tsx"] 
         }
       ]
     }
