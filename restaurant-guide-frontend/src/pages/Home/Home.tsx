@@ -57,7 +57,7 @@ const Home: React.FC = () => {
             <RestaurantCard key={restaurant.id} restaurant={restaurant} />
           ))
         ) : (
-          <p>No restaurants match the selected rating.</p>
+          <p>No restaurants</p>
         )}
       </div>
       <RestaurantMap restaurants={filteredRestaurants} center={mapCenter} />

@@ -1,16 +1,16 @@
 // src/services/googlePlacesService.ts
 import axios from 'axios';
 import { Restaurant } from '../types/Restaurant';
-// import Cache from '../utils/cache';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const GOOGLE_PLACES_API_KEY = process.env.GOOGLE_PLACES_API_KEY as string;
 const GOOGLE_PLACES_BASE_URL = 'https://maps.googleapis.com/maps/api/place';
 const DEFAULT_LOCATION = process.env.DEFAULT_LOCATION || '40.712776,-74.005974';
 const DEFAULT_RADIUS = parseInt(process.env.DEFAULT_RADIUS || '1500', 10);
-// const CACHE_TTL = 1000 * 60 * 60; // 1 hour
 
-// const cache = new Cache(CACHE_TTL);
-
+console.log(process.env.GOOGLE_PLACES_API_KEY); 
 /**
  * Fetch all restaurants using Google Places API.
  */

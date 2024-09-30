@@ -1,4 +1,3 @@
-version: '3'
 services:
   backend:
     image: abhinav2413/restaurant-guide-backend  # Backend image from Docker Hub

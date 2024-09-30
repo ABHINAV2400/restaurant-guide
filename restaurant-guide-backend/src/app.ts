@@ -27,7 +27,7 @@ app.register(helmet, {
 
 // Register CORS
 app.register(cors, {
-  origin: process.env.CORS_ORIGIN?.split(','),
+  origin: process.env.CORS_ORIGIN,
   methods: ['GET'],
 });
 
@@ -39,16 +39,12 @@ app.register(rateLimit, {
 });
 
 app.register(fastifyStatic, {
-  root: path.join(__dirname, '../restaurant-guide-frontend/build'),
+  root: path.join(__dirname, '../restaurant-guide-frontend/build', 'index.html'),
   prefix: '/', // Serve all static files from this root
 });
 
 // Register Routes
 app.register(restaurantRoutes, { prefix: '/api' });
-
-app.setNotFoundHandler((req, reply) => {
-  reply.sendFile('index.html'); // serve index.html for all unmatched routes
-});
 
 // Register Error Handler
 app.register(errorHandler);
