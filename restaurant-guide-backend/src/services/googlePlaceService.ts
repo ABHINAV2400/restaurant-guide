@@ -10,7 +10,6 @@ const GOOGLE_PLACES_BASE_URL = 'https://maps.googleapis.com/maps/api/place';
 const DEFAULT_LOCATION = process.env.DEFAULT_LOCATION || '40.712776,-74.005974';
 const DEFAULT_RADIUS = parseInt(process.env.DEFAULT_RADIUS || '1500', 10);
 
-console.log(process.env.GOOGLE_PLACES_API_KEY); 
 /**
  * Fetch all restaurants using Google Places API.
  */
@@ -36,8 +35,6 @@ export const fetchAllRestaurants = async (
   const response = await axios.get(url, { params });
 
   const results = response.data.results;
-
-  console.log("result", results);
 
   const restaurants: Restaurant[] = results.map((place: any) => ({
     id: place.place_id,
